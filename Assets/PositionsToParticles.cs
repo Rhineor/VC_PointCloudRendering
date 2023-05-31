@@ -36,9 +36,9 @@ public class PositionsToParticles : MonoBehaviour
 
       var particleColor = new Color
       {
-        r = uint.Parse (positionWithColor[3]),
-        g = uint.Parse (positionWithColor[4]),
-        b = uint.Parse (positionWithColor[5]),
+        r = (float) uint.Parse (positionWithColor[3]) / 255,
+        g = (float) uint.Parse (positionWithColor[4]) / 255,
+        b = (float) uint.Parse (positionWithColor[5]) / 255,
         a = 1
       };
       particles[index].startColor = particleColor;
