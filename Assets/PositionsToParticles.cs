@@ -21,7 +21,7 @@ public class PositionsToParticles : MonoBehaviour
 
     particles = new ParticleSystem.Particle[positionsWithColors.Count];
 
-    for (int index = 0; index < particles.Length; index+=100)
+    for (int index = 0; index < particles.Length; index++)
     {
       particles[index].startSize = particleSize;
 
@@ -44,6 +44,7 @@ public class PositionsToParticles : MonoBehaviour
       particles[index].startColor = particleColor;
     }
 
+    particleSystem.maxParticles = particles.Length;
     particleSystem.SetParticles (particles);
     particleSystem.Pause ();
   }
